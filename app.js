@@ -7,7 +7,6 @@ const game = {
   previousGuesses: [],
   promptText: null,
   getGuess: function(){
-    console.log(this.secretNum)
     this.promptText = `Enter a guess between ${this.smallestNum} and ${this.biggestNum}`
     this.userGuess = Number(window.prompt(this.promptText)) 
     while (isNaN(this.userGuess) || this.userGuess < this.smallestNum || this.userGuess > this.biggestNum){
