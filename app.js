@@ -9,7 +9,7 @@ const game = {
   getGuess: function(){
     this.promptText = `Enter a guess between ${this.smallestNum} and ${this.biggestNum}`
     this.userGuess = Number(window.prompt(this.promptText)) 
-    while (isNaN(this.userGuess) || this.userGuess <= this.smallestNum || this.userGuess >= this.biggestNum){
+    while (isNaN(this.userGuess) || this.userGuess < this.smallestNum || this.userGuess > this.biggestNum){
       this.promptText = `Please enter a valid number`
       this.userGuess = Number(window.prompt(this.promptText))
     } 
